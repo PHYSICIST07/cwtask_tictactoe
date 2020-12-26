@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tictacnew.css">
+</head> 
+<body>
+    <div class="bigboi">
+    <div class="row">
+        <button class="btn"  id="1" onclick="clicker(this.id)"></button>
+        <button class="btn"  id="2" onclick="clicker(this.id)"></button>
+        <button class="btn"  id="3" onclick="clicker(this.id)"></button>
+    </div>
+    <div class="row">
+        <button class="btn" id="4" onclick="clicker(this.id)"></button>
+        <button class="btn"  id="5" onclick="clicker(this.id)"></button>
+        <button class="btn"  id="6" onclick="clicker(this.id)"></button>
+    </div>
+    <div class="row">
+        <button class="btn"  id="7" onclick="clicker(this.id)"></button>
+        <button class="btn"  id="8" onclick="clicker(this.id)"></button>
+        <button class="btn" id="9" onclick="clicker(this.id)"></button>
+    </div>
+</div>
+<script>
+     let turn = 0;
+   function clicker(temp)
+   {
+       if(turn % 2 == 0)
+       {
+        document.getElementById(temp).innerHTML = "X";
+       }
+       else
+       {
+        document.getElementById(temp).innerHTML = "O";
+       }
+       turn++;
+       document.getElementById(temp).disabled = true;
+   }
+</script>
+</body>
+</html>
